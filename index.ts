@@ -22,10 +22,6 @@ class Book {
 const myBook = new Book("The Catcher in the Rye", "J.D. Salinger");
 const anotherBook = new Book("To Kill a Mockingbird", "Harper Lee");
 
-// calling method on each instance
-myBook.print();
-anotherBook.print();
-
 // calling static method
 Book.displayTotalInstances();
 
@@ -48,4 +44,8 @@ class EBook extends Book {
 }
 
 const myEbook = new EBook("The Catcher in the Rye", "J.D. Salinger", 500);
-myEbook.print();
+
+// calling method on each instances
+
+// polymorphism
+[myBook, anotherBook, myEbook].forEach((book: Book) => book.print());
